@@ -4,6 +4,16 @@ title: Home
 description: A modern, fast, and beautiful website built with Eleventy and Bootstrap 5
 ---
 
-{% include "./templates/bedCrumb.html" %}
+<section id="breadcrumb" class="bg-black py-3">
+    {% include "./templates/bedCrumb.html" %}
+</section>
+<section class="py-4">
+    <div class="container">
+        <div class="row">
+            {% include "./templates/primary-sidebar.html" %}
+            {% include "./templates/blog-gallery.html" %}
+        </div>
+    </div>
+</section>
 
-{% include "./templates/lorem.html" %}
+{% include "./templates/footer.html"%}
