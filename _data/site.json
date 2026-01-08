@@ -1,0 +1,29 @@
+{
+    "title": "Bootstrap + 11ty Starter",
+    "description": "A modern, fast, and beautiful website built with Eleventy and Bootstrap 5",
+    "author": "Your Name",
+    "url": "https://example.com",
+    "navigation": [
+        {
+            "label": "Home",
+            "url": "/"
+        },
+        {
+            "label": "About",
+            "url": "/about/"
+        },
+        {
+            "label": "Blog",
+            "url": "/blog/"
+        },
+        {
+            "label": "Contact",
+            "url": "/contact/"
+        }
+    ],
+    "social": {
+        "twitter": "https://twitter.com/yourhandle",
+        "github": "https://github.com/yourhandle",
+        "linkedin": "https://linkedin.com/in/yourhandle"
+    }
+}

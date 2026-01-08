@@ -1,0 +1,24 @@
+<!-- Navigation Header -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <i class="bi bi-lightning-charge-fill me-2"></i>{{ site.title }}
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        {% for item in site.navigation %}
+        <li class="nav-item">
+          <a class="nav-link{% if page.url == item.url %} active{% endif %}" href="{{ item.url }}">{{ item.label }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+      <a href="#contact" class="btn btn-primary ms-lg-3">Get Started</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Spacer for fixed navbar -->
+<div style="height: 76px;"></div>

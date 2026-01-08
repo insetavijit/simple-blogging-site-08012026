@@ -1,0 +1,50 @@
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <h5><i class="bi bi-lightning-charge-fill me-2"></i>{{ site.title }}</h5>
+        <p>{{ site.description }}</p>
+        <div class="social-links">
+          <a href="{{ site.social.twitter }}" aria-label="Twitter" target="_blank" rel="noopener">
+            <i class="bi bi-twitter-x"></i>
+          </a>
+          <a href="{{ site.social.github }}" aria-label="GitHub" target="_blank" rel="noopener">
+            <i class="bi bi-github"></i>
+          </a>
+          <a href="{{ site.social.linkedin }}" aria-label="LinkedIn" target="_blank" rel="noopener">
+            <i class="bi bi-linkedin"></i>
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-4">
+        <h5>Navigation</h5>
+        <ul class="list-unstyled">
+          {% for item in site.navigation %}
+          <li class="mb-2"><a href="{{ item.url }}">{{ item.label }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="col-lg-2 col-md-4">
+        <h5>Resources</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="#">Documentation</a></li>
+          <li class="mb-2"><a href="#">Getting Started</a></li>
+          <li class="mb-2"><a href="#">Examples</a></li>
+          <li class="mb-2"><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4 col-md-4">
+        <h5>Stay Updated</h5>
+        <p>Subscribe to our newsletter for the latest updates.</p>
+        <form class="d-flex gap-2">
+          <input type="email" class="form-control" placeholder="Enter your email" aria-label="Email address">
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="mb-0">&copy; {% year %} {{ site.title }}. Built with <a href="https://www.11ty.dev/">Eleventy</a> and <a href="https://getbootstrap.com/">Bootstrap 5</a>.</p>
+    </div>
+  </div>
+</footer>

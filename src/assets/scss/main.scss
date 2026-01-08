@@ -1,0 +1,81 @@
+// Bootstrap 5 - Customized SCSS Entry Point
+// ==================================================
+
+// 1. Include Bootstrap's required functions first
+@import "bootstrap/scss/functions";
+
+// 2. Custom variable overrides BEFORE Bootstrap defaults
+// Primary brand colors
+$primary: #6366f1;        // Indigo
+$secondary: #64748b;      // Slate
+$success: #22c55e;        // Green
+$info: #06b6d4;           // Cyan
+$warning: #f59e0b;        // Amber
+$danger: #ef4444;         // Red
+$light: #f8fafc;          // Slate 50
+$dark: #0f172a;           // Slate 900
+
+// Typography
+$font-family-sans-serif: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-family-headings: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+$headings-font-weight: 700;
+
+// Spacing
+$spacer: 1rem;
+
+// Border radius
+$border-radius: 0.5rem;
+$border-radius-sm: 0.375rem;
+$border-radius-lg: 0.75rem;
+$border-radius-xl: 1rem;
+$border-radius-pill: 50rem;
+
+// Buttons
+$btn-border-radius: $border-radius;
+$btn-padding-y: 0.625rem;
+$btn-padding-x: 1.25rem;
+$btn-font-weight: 500;
+
+// Cards
+$card-border-radius: $border-radius-lg;
+$card-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+
+// Navbar
+$navbar-padding-y: 1rem;
+
+// 3. Include Bootstrap defaults
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+
+// 4. Include required Bootstrap stylesheets
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/root";
+
+// 5. Include Bootstrap components (selective import for smaller bundle)
+@import "bootstrap/scss/reboot";
+@import "bootstrap/scss/type";
+@import "bootstrap/scss/images";
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/grid";
+@import "bootstrap/scss/tables";
+@import "bootstrap/scss/forms";
+@import "bootstrap/scss/buttons";
+@import "bootstrap/scss/transitions";
+@import "bootstrap/scss/dropdown";
+@import "bootstrap/scss/button-group";
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/navbar";
+@import "bootstrap/scss/card";
+@import "bootstrap/scss/badge";
+@import "bootstrap/scss/alert";
+@import "bootstrap/scss/list-group";
+@import "bootstrap/scss/close";
+@import "bootstrap/scss/modal";
+@import "bootstrap/scss/tooltip";
+@import "bootstrap/scss/helpers";
+@import "bootstrap/scss/utilities";
+@import "bootstrap/scss/utilities/api";
+
+// 6. Custom component styles
+@import "custom";

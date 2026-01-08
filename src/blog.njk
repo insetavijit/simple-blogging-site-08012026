@@ -1,0 +1,46 @@
+---
+layout: base
+title: Blog
+description: Latest articles and tutorials on web development
+---
+
+<section class="section">
+  <div class="container">
+    <div class="section-title">
+      <h1>Blog</h1>
+      <p>Insights, tutorials, and thoughts on modern web development</p>
+    </div>
+    <div class="row g-4">
+      {% for post in collections.posts | reverse %}
+        <div class="col-md-6 col-lg-4">
+          <article class="card h-100 shadow-sm">
+            <div class="card-body d-flex flex-column">
+              <div class="mb-2">
+                {% for tag in post.data.tags %}
+                  {% if tag != "posts" %}
+                    <span class="badge bg-primary-subtle text-primary me-1">{{ tag }}</span>
+                  {% endif %}
+                {% endfor %}
+              </div>
+              <h2 class="card-title h5">
+                <a href="{{ post.url }}" class="text-decoration-none text-dark stretched-link">
+                  {{ post.data.title }}
+                </a>
+              </h2>
+              <p class="card-text text-muted flex-grow-1">{{ post.data.excerpt }}</p>
+              <div class="mt-auto">
+                <small class="text-muted">
+                  <i class="bi bi-calendar me-1"></i>
+                  {{ post.data.date | dateFormat }}
+                  <span class="mx-2">•</span>
+                  <i class="bi bi-person me-1"></i>
+                  {{ post.data.author }}
+                </small>
+              </div>
+            </div>
+          </article>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
